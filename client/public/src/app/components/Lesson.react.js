@@ -141,9 +141,9 @@ var Lesson = React.createClass({
           </div>
           
           <div className = "CodeBoxContainer">
-            <div className = "LessonResponseContainer ErrorBox">
+            <div className = "LessonResponseContainer">
               <CodeResponseBox
-                className = { this.state.codeResponseStatusClass }
+                codeResponseStatusClass = { this.state.codeResponseStatusClass }
                 responses = { this.state.codeResponse } 
                 />
             </div>
