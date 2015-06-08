@@ -128,35 +128,27 @@ var Lesson = React.createClass({
     }
 
     return (
-      <div className = "AppBodyContainer" height='100%'>
-        <div className = "TableOfContentsContainer">
-          <ul>
-            { sectionList }
-          </ul>
-        </div>
-
-        <div className = "LessonContainer">
-          <div className = "ContentContainer">
-            <ContentPanel contents = { content } />
+      <div className = "AppBodyContainer container">
+          <div className = "TableOfContentsContainer">
+            <ul>
+              { sectionList }
+            </ul>
           </div>
-          
-          <div className = "CodeBoxContainer">
-            <div className = "LessonResponseContainer">
+          <div className = "LessonContainer">
+            <ContentPanel contents = { content } />
+            <div className = "CodeBoxContainer">
               <CodeResponseBox
                 codeResponseStatusClass = { this.state.codeResponseStatusClass }
                 responses = { this.state.codeResponse } 
                 />
+              <CodeMirror
+                value    = { code }
+                onChange = { this.updateCode }
+                options  = { editorOptions }
+              />
+              <button onClick = { this.codeEvaluation } className = "btn btn-default submit-code"> Submit </button>
             </div>
-
-            <CodeMirror
-              value    = { code }
-              onChange = { this.updateCode }
-              options  = { editorOptions }
-            />
-            <button onClick = { this.codeEvaluation } className = "btn btn-default submit-code"> Submit </button>
           </div>
-        </div>
-
       </div>
     );
   }

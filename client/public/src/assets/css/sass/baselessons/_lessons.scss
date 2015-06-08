@@ -1,8 +1,8 @@
 .AppBodyContainer {
+  padding-top: 1em;
   background-color: transparent;
-  height: 120%;
   width: 100%;
-  overflow: auto;
+  padding-left: 0;
 }
 
 .TableOfContentsContainer {
@@ -15,11 +15,9 @@
 
   font-family: 'Fredericka the Great', sans-serif;
   line-height: 2;
-  height: 38em;
-  width: 20%;
-  min-width: 13em;
-  overflow: auto;
-  display: inline-block;
+  height: 35em;
+  width: 13em;
+  float:left;
 
   li {
     list-style:none;
@@ -35,12 +33,9 @@
     border-radius: $custom-border-radius;
     box-shadow: $custom-border-shadow;
 
-    height: 38em;
-    width: 78%;
-    min-width: 10em;
-    display: inline-block;
-
-    float: right;
+    height: 35em;
+    min-width: 30em;
+    margin-left: 14em;
 
     .ContentContainer {
       border: $custom-border-setting;
@@ -52,15 +47,12 @@
 
       display: inline-block;
 
-      min-height: 15em;
+      min-height: 12em;
       overflow: auto;
       width: 100%;
       color: white;
     }
-  }
-
-
-
+}
 
 .CodeboxContainer {
   background-color: $custom-background-color;
